@@ -3,7 +3,7 @@
   <parameter name="IIS Web Application Name" description="" value="TelecomAppApi" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ali07\\source\\repos\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
   </parameter>
-  <parameter name="TelecomAppBackend.Data.TelecomDbContext" description="" value="Data Source=tcp:telecomappbackend-server.database.windows.net,1433;Initial Catalog=TelecomAppBackend_db;User Id=serveradmin@telecomappbackend-server;Password=Skillstorm0792!" tags="dbfullsql">
+  <parameter name="TelecomAppBackend.Data.TelecomDbContext" description="" value="Server=tcp:telecomappbackend-server.database.windows.net,1433;Initial Catalog=TelecomAppBackend_db;Persist Security Info=False;User ID=serveradmin;Password=Skillstorm0792!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
     <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\ali07\\source\\repos\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\TelecomAppBackend\.Data\.TelecomDbContext\.sql$" />
   </parameter>
 </parameters>
