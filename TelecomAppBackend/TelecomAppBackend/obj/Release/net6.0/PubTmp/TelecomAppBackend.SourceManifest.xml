@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\ali07\source\repos\TelecomApp\TelecomAppBackend\TelecomAppBackend\obj\Release\net6.0\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\ali07\source\repos\TelecomApp\TelecomAppBackend\TelecomAppBackend\obj\Release\net6.0\PubTmp\EFSQLScripts\TelecomAppBackend.Data.TelecomDbContext.sql" />
+</sitemanifest>

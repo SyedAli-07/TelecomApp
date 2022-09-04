@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\colin\\Documents\\SkillStorm\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\TelecomAppBackend.csproj": {}
+    "C:\\Users\\ali07\\source\\repos\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\TelecomAppBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\colin\\Documents\\SkillStorm\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\TelecomAppBackend.csproj": {
+    "C:\\Users\\ali07\\source\\repos\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\TelecomAppBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\colin\\Documents\\SkillStorm\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\TelecomAppBackend.csproj",
+        "projectUniqueName": "C:\\Users\\ali07\\source\\repos\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\TelecomAppBackend.csproj",
         "projectName": "TelecomAppBackend",
-        "projectPath": "C:\\Users\\colin\\Documents\\SkillStorm\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\TelecomAppBackend.csproj",
-        "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\colin\\Documents\\SkillStorm\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\obj\\",
+        "projectPath": "C:\\Users\\ali07\\source\\repos\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\TelecomAppBackend.csproj",
+        "packagesPath": "C:\\Users\\ali07\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ali07\\source\\repos\\TelecomApp\\TelecomAppBackend\\TelecomAppBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\colin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ali07\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

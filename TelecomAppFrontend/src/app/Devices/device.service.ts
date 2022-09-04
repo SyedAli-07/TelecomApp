@@ -5,13 +5,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Device } from './devices-model';
 import { DeviceDTO } from './device-DTO';
 import { DeviceDTO2 } from './device-DTO2';
+import { environment } from 'environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeviceService {
 
-  private devicesUrl="https://localhost:7238/api/Devices";
+  private devicesUrl=`${environment.apiUrl}/Devices`;
 
   private httpOptions = {
     headers: new HttpHeaders({

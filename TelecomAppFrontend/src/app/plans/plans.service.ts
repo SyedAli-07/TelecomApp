@@ -4,13 +4,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Plan } from './plans-model';
 import { PlanDTO } from './plan-DTO';
+import { environment } from 'environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlanService {
 
-  private plansUrl="https://localhost:7238/api/Plans";
+  private plansUrl=`${environment.apiUrl}/Plans`;
 
   private httpOptions = {
     headers: new HttpHeaders({
