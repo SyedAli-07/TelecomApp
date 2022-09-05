@@ -25,8 +25,8 @@ export const msalConfig: Configuration = {
     auth: {
         clientId: '76614ac9-0d7f-4fa2-beb7-2e5588b40a90',
         authority: b2cPolicies.authorities.signInSignUp.authority,
-        redirectUri: 'https://telecomappapi.azurewebsites.net',
-        postLogoutRedirectUri: 'https://telecomappapi.azurewebsites.net',
+        redirectUri: 'https://orange-mushroom-0fdc85810.1.azurestaticapps.net',
+        postLogoutRedirectUri: 'https://orange-mushroom-0fdc85810.1.azurestaticapps.net',
         navigateToLoginRequestUrl: true,
         validateAuthority: true
     },

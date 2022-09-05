@@ -25,8 +25,8 @@ import { PublicClientApplication } from '@azure/msal-browser';
       auth: {
         clientId: '76614ac9-0d7f-4fa2-beb7-2e5588b40a90',
         authority: "https://login.microsoftonline.com/common/",
-        redirectUri: 'https://telecomappapi.azurewebsites.net',
-        postLogoutRedirectUri: 'https://telecomappapi.azurewebsites.net',
+        redirectUri: 'https://orange-mushroom-0fdc85810.1.azurestaticapps.net',
+        postLogoutRedirectUri: 'https://orange-mushroom-0fdc85810.1.azurestaticapps.net',
         navigateToLoginRequestUrl: true,
       },
       cache: {
