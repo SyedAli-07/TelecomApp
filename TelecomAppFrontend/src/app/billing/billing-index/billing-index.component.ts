@@ -25,11 +25,10 @@ export class BillingIndexComponent implements OnInit {
       {
         this.plans=plans;
         this.plans.forEach(plan => {
-          this.planSubtotal=(this.planSubtotal*100+plan.price*100)/100;
-         
-          
+          this.planSubtotal=(this.planSubtotal*100+plan.price*100)/100;  
         });
-        this.planSubtotal+=14;
+
+        this.planSubtotal=(this.planSubtotal*100 + 14*100)/100;
         this.tax=Number(((this.planSubtotal*100*0.0625)/100).toFixed(2));
         this.total=(this.planSubtotal*100+this.tax*100)/100;
       });
