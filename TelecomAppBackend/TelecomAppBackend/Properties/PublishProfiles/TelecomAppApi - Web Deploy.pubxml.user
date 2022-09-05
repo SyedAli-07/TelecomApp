@@ -7,11 +7,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZK/oVTFttUiLZPm3OLyqbAAAAAACAAAAAAAQZgAAAAEAACAAAACZ9TzTAijWHK64auCwG9uZ3KJtYIMEnJ9nydwlgjHbaQAAAAAOgAAAAAIAACAAAADSLHr26ZJlyF9lGWlfc1Is48fmKZG3o3onUL+7zd3zLIAAAAAib0xyZPTMql7K29fdLPFAHyy6xmnwzyFz+mImZeGs2jM6UGuKMIyz8BN99fwzfv7ODoKBZRIQwQiiWusXrTSLAwJopQS6VBJQ0G+djGcCDTnhPuvcX3u7RAxCajcN00C/DE++HwsaJHZ/OCZ3Ps4LfNNolzXzjLG5Cc0q7ZSq7kAAAACS4IMPq62LuWJVcO3EsxzxdBJFXAZwrptqtJNmudMU5bjo8T7Q1mIzYmledRx3JYPHl/bN62HT0hpUeIBzi8aj</EncryptedPassword>
-    <History>True|2022-09-04T19:48:30.6758061Z;True|2022-09-04T14:09:02.9625331-05:00;</History>
+    <History>False|2022-09-04T20:15:42.7932624Z;True|2022-09-04T14:48:30.6758061-05:00;True|2022-09-04T14:09:02.9625331-05:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">
-      <Value>Server=tcp:telecomappbackend-server.database.windows.net,1433%3bInitial Catalog=TelecomAppBackend_db%3bPersist Security Info=False%3bUser ID=serveradmin%3bPassword=Skillstorm0792!%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+      <Value>Data Source=tcp:telecomappbackend-server.database.windows.net,1433%3bInitial Catalog=TelecomAppBackend_db%3bUser Id=serveradmin%40telecomappbackend-server%3bPassword=SKillstorm0792!</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
   <ItemGroup>
