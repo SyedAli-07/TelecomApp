@@ -1,3 +1,4 @@
+<h2> {{username}}</h2>
 <div id="titleBox">
 <h1 class="title">Your Active Plans</h1>
 <button (click)="toggleAddPlanForm();" class="button is-primary">Add A New Plan</button>
@@ -10,7 +11,7 @@
         <h2>Device Limit: {{plan.deviceLimit}}</h2>
         <h2>Price: {{plan.price}}</h2>
     </button>
-    
+
 </div>
 <button (click)="addNewPlan();" id="submit" class="button is-primary">Submit</button>
 <button id="cancel" class="button is-danger" (click)="toggleAddPlanForm();">Cancel</button>

@@ -8,6 +8,7 @@ import { DeviceService } from 'app/Devices/device.service';
 import { PlanDTO } from '../plan-DTO';
 import { Device } from 'app/Devices/devices-model';
 import { AddDeviceFormComponent } from 'app/Devices/add-device-form/add-device-form.component';
+import { MsalService } from '@azure/msal-angular';
 
 @Component({
   selector: 'app-plans-index',
@@ -16,13 +17,15 @@ import { AddDeviceFormComponent } from 'app/Devices/add-device-form/add-device-f
 })
 export class PlansIndexComponent implements OnInit {
 
-  constructor(private planService:PlanService, private deviceService:DeviceService, private router:Router) { }
+  constructor(private planService:PlanService, private deviceService:DeviceService, private router:Router, private _msalService: MsalService) { }
 
   ngOnInit(): void {
     this.getUsersPlans();
+    const account = this._msalService.instance.getAllAccounts()[0];
+    this.username = account.username;
   }
 
-
+  username: string = '';
   plans:Plan[]=[];
   planIds:string[]=[];
   showAddPlan:boolean=false;
@@ -86,6 +89,24 @@ export class PlansIndexComponent implements OnInit {
   }
   }
 
+  // getUsersPlans():void{
+
+  //   const account= this._msalService.instance.getAllAccounts()[0];
+
+  //   this.username= account.username;
+
+  //   this.planService.getUsersPlans(this.username).subscribe(plans=>{
+
+  //     this.plans=plans;
+
+  //     plans.forEach(plan => {
+
+  //       if(!plan.devices || plan.deviceLimit>plan.devices.length)
+  //       this.planIds.push(plan.planId.toString())
+  //     });
+  //   });
+  // }
+
   getUsersPlans():void{
     this.planService.getUsersPlans(1).subscribe(plans=>{
       this.plans=plans;
@@ -95,6 +116,7 @@ export class PlansIndexComponent implements OnInit {
       });
     });
   }
+
   deletePlan(id:number):void{
     this.planService.deletePlan(id).subscribe({next:(res)=>{
       console.log(res);
