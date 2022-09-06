@@ -26,8 +26,8 @@ export class PlanService {
     return this.http.get<Plan>(url,this.httpOptions);
   }
 
-  getUsersPlans(id:number):Observable<Plan[]>{
-    let url=`${this.plansUrl}/User/${id}`;
+  getUsersPlans(username:string):Observable<Plan[]>{
+    let url=`${this.plansUrl}/User/${username}`;
     return this.http.get<Plan[]>(url,this.httpOptions);
   }
 

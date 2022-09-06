@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MsalService } from '@azure/msal-angular';
 import { Plan } from 'app/plans/plans-model';
 import { PlanService } from 'app/plans/plans.service';
 
@@ -13,15 +14,19 @@ export class BillingIndexComponent implements OnInit {
   planSubtotal:number=0;
   tax:number=0;
   total:number=0;
+  username: string ='';
 
-  constructor(private plansService: PlanService) { }
+  constructor(private plansService: PlanService, private _msalService: MsalService) { }
 
   ngOnInit(): void {
     this.retrievePlans();
   }
 
   retrievePlans(){
-    this.plansService.getUsersPlans(1).subscribe(plans=>
+    const account = this._msalService.instance.getAllAccounts()[0];
+    this.username = account.username;
+
+    this.plansService.getUsersPlans(this.username).subscribe(plans=>
       {
         this.plans=plans;
         this.plans.forEach(plan => {

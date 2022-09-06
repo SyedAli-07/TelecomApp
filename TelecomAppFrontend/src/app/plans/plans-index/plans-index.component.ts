@@ -21,8 +21,6 @@ export class PlansIndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUsersPlans();
-    const account = this._msalService.instance.getAllAccounts()[0];
-    this.username = account.username;
   }
 
   username: string = '';
@@ -35,21 +33,21 @@ export class PlansIndexComponent implements OnInit {
       planName: 'Basic',
       deviceLimit:1,
       price:19.99,
-      userId:1,
+      username: this.username,
       devices: []
     },
     {
       planName: 'Family',
       deviceLimit:4,
       price:89.99,
-      userId:1,
+      username: this.username,
       devices: []
     },
     {
       planName: 'Premium',
       deviceLimit:6,
       price:109.99,
-      userId:1,
+      username: this.username,
       devices: []
     }
   ]
@@ -89,33 +87,30 @@ export class PlansIndexComponent implements OnInit {
   }
   }
 
-  // getUsersPlans():void{
-
-  //   const account= this._msalService.instance.getAllAccounts()[0];
-
-  //   this.username= account.username;
-
-  //   this.planService.getUsersPlans(this.username).subscribe(plans=>{
-
-  //     this.plans=plans;
-
-  //     plans.forEach(plan => {
-
-  //       if(!plan.devices || plan.deviceLimit>plan.devices.length)
-  //       this.planIds.push(plan.planId.toString())
-  //     });
-  //   });
-  // }
-
   getUsersPlans():void{
-    this.planService.getUsersPlans(1).subscribe(plans=>{
+
+    const account= this._msalService.instance.getAllAccounts()[0];
+    this.username= account.username;
+
+    this.planService.getUsersPlans(this.username).subscribe(plans=>{
       this.plans=plans;
+
       plans.forEach(plan => {
         if(!plan.devices || plan.deviceLimit>plan.devices.length)
         this.planIds.push(plan.planId.toString())
       });
     });
   }
+
+  // getUsersPlans():void{
+  //   this.planService.getUsersPlans(1).subscribe(plans=>{
+  //     this.plans=plans;
+  //     plans.forEach(plan => {
+  //       if(!plan.devices || plan.deviceLimit>plan.devices.length)
+  //       this.planIds.push(plan.planId.toString())
+  //     });
+  //   });
+  // }
 
   deletePlan(id:number):void{
     this.planService.deletePlan(id).subscribe({next:(res)=>{
@@ -148,7 +143,8 @@ export class PlansIndexComponent implements OnInit {
   }
   addNewPlan():void{
     if(this.selectedPlan){
-    this.planService.addPlan(this.selectedPlan).subscribe({next:(res)=>{
+      this.selectedPlan.username= this.username;
+      this.planService.addPlan(this.selectedPlan).subscribe({next:(res)=>{
       console.log(res);
       this.router.navigate(['/plans']).then(() => {
         location.reload();

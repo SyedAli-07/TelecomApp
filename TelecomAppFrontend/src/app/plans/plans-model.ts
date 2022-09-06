@@ -5,7 +5,7 @@ export interface Plan {
         planName:string,
         deviceLimit:number,
         price:number,
-        userId:number,
+        username:string,
         devices:Device[]
         expand:boolean,
         addForm:boolean
